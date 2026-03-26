@@ -96,11 +96,4 @@ If you use PRISM in your research, please cite:
 
 - Code: [MIT License](LICENSE)
 - Dataset: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-```
 
-**Ctrl+O** → Enter → **Ctrl+X** y sube los cambios:
-```
-cd ~/prism-repo
-git add README.md
-git commit -m "Add comprehensive README"
-git push
