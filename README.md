@@ -75,7 +75,7 @@ Each section row contains F=26 features:
 The PRISM matrices (.npy files) and trained baseline models
 are available on Zenodo:
 
-> **[Dataset DOI — coming soon]**
+> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19235865.svg)](https://doi.org/10.5281/zenodo.19235865)
 
 ## Citation
 
