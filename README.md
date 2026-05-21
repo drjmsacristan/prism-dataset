@@ -86,7 +86,7 @@ If you use PRISM in your research, please cite:
              A 2D Section-Aware Dataset for Static PE Malware Detection},
   author  = {Sacrist{\'a}n, Jos{\'e} M. and
              Gonz{\'a}lez-Tablas, Ana I.},
-  journal = {IEEE Access},
+  journal = {Journal of Information Security and Applications},
   year    = {2026},
   note    = {Under review}
 }
