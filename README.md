@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
 [![Dataset: CC BY 4.0](https://img.shields.io/badge/Dataset-CC%20BY%204.0-green.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![DOI](https://zenodo.)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20480283.svg)](https://doi.org/10.5281/zenodo.20480283).
 
 PRISM encodes each Windows PE binary as a 2D matrix
 **M ∈ ℝ^{(N_max+1) × F}** in which each row corresponds to one PE
@@ -223,7 +223,7 @@ SECURITY.md      responsible-use notice (no binaries are distributed)
 ## Data availability
 
 - **PRISM matrices and trained baseline models:** Zenodo, DOI
-  [10.5281/zenodo.19235865](https://doi.org/10.5281/zenodo.19235865).
+  [10.5281/zenodo.20480283](https://doi.org/10.5281/zenodo.20480283).
 - **BODMAS binaries:** not redistributed here; request from the original
   authors (Yang et al., UIUC) under their data-sharing terms.
 - **SOREL-20M / MalwareBazaar:** obtain from the original providers
