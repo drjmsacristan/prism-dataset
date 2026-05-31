@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use PRISM, please cite the dataset and the accompanying paper."
+title: "PRISM: PE Relational Inter-Section Matrix — A 2D Section-Aware Dataset for Static PE Malware Detection"
+authors:
+  - family-names: "Sacristán"
+    given-names: "José M."
+    affiliation: "Universidad Carlos III de Madrid (UC3M)"
+  - family-names: "González-Tablas"
+    given-names: "Ana I."
+    affiliation: "Universidad Carlos III de Madrid (UC3M)"
+version: "1.12"
+date-released: "2026-05-30"
+license: MIT
+repository-code: "https://github.com/drjmsacristan/prism-dataset"
+doi: "10.5281/zenodo.19235865"
+keywords:
+  - malware detection
+  - PE files
+  - section-aware features
+  - dataset
+  - EMBER
+  - BODMAS
+  - SOREL-20M
+  - LightGBM
+  - mutual information
+  - 2D representation

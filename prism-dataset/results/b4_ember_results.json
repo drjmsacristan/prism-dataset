@@ -1,0 +1,192 @@
+{
+  "controlled_subcorpus_benchmark": {
+    "subcorpus_metadata": {
+      "total_samples": 32623,
+      "malware_samples": 3486,
+      "benign_samples": 29137,
+      "bodmas_excluded": 16231,
+      "bodmas_exclusion_reason": "BODMAS distributed without PE binaries (feature vectors only)",
+      "train_size": 26099,
+      "test_size": 6524,
+      "train_malware": 2789,
+      "train_benign": 23310,
+      "test_malware": 697,
+      "test_benign": 5827,
+      "extraction_failures": 350,
+      "extraction_failure_rate_pct": 1.061,
+      "failure_breakdown": {
+        "module 'lief' has no attribute 'not_found'": 350
+      }
+    },
+    "models": {
+      "B2_PRISM_subcorpus": {
+        "input_dims": 425,
+        "trees_used": 221,
+        "training_seconds": 512.6,
+        "auc": 0.99993,
+        "tpr_at_fpr_0_001": 0.99139,
+        "tpr_at_fpr_0_01": 0.9957,
+        "f1_at_0_5": 0.99424,
+        "confusion_matrix_at_0_5": [
+          [
+            5825,
+            2
+          ],
+          [
+            6,
+            691
+          ]
+        ],
+        "bootstrap_ci_auc": [
+          0.99985,
+          0.99999
+        ],
+        "bootstrap_ci_tpr": [
+          0.98333,
+          0.99858
+        ],
+        "bootstrap_median_tpr": 0.99273,
+        "bootstrap_std_tpr": 0.00411
+      },
+      "B4_EMBER_subcorpus": {
+        "input_dims": 2381,
+        "trees_used": 118,
+        "training_seconds": 473.6,
+        "auc": 0.99997,
+        "tpr_at_fpr_0_001": 0.99283,
+        "tpr_at_fpr_0_01": 1.0,
+        "f1_at_0_5": 0.99134,
+        "confusion_matrix_at_0_5": [
+          [
+            5825,
+            2
+          ],
+          [
+            10,
+            687
+          ]
+        ],
+        "bootstrap_ci_auc": [
+          0.99993,
+          0.99999
+        ],
+        "bootstrap_ci_tpr": [
+          0.98148,
+          0.99862
+        ],
+        "bootstrap_median_tpr": 0.99317,
+        "bootstrap_std_tpr": 0.0048,
+        "top_20_features_gain": [
+          {
+            "feature_name": "imports_4",
+            "gain": 419167.7244606018
+          },
+          {
+            "feature_name": "header_28",
+            "gain": 75484.12845561255
+          },
+          {
+            "feature_name": "imports_1267",
+            "gain": 10425.70538018983
+          },
+          {
+            "feature_name": "general_1",
+            "gain": 3774.9247749830056
+          },
+          {
+            "feature_name": "header_54",
+            "gain": 3457.0836194771773
+          },
+          {
+            "feature_name": "histogram_93",
+            "gain": 2286.4649603710277
+          },
+          {
+            "feature_name": "histogram_251",
+            "gain": 1798.5192669478129
+          },
+          {
+            "feature_name": "histogram_212",
+            "gain": 1639.7625809055971
+          },
+          {
+            "feature_name": "histogram_0",
+            "gain": 1334.973110619108
+          },
+          {
+            "feature_name": "datadirectories_12",
+            "gain": 1330.7769555671625
+          },
+          {
+            "feature_name": "strings_28",
+            "gain": 1139.873317545485
+          },
+          {
+            "feature_name": "strings_99",
+            "gain": 1098.3556706826203
+          },
+          {
+            "feature_name": "section_213",
+            "gain": 1034.4736940860748
+          },
+          {
+            "feature_name": "strings_27",
+            "gain": 1015.5396214529756
+          },
+          {
+            "feature_name": "imports_711",
+            "gain": 672.9226702451706
+          },
+          {
+            "feature_name": "byteentropy_128",
+            "gain": 651.0234216035369
+          },
+          {
+            "feature_name": "header_11",
+            "gain": 637.6576768327504
+          },
+          {
+            "feature_name": "byteentropy_149",
+            "gain": 522.6367381838209
+          },
+          {
+            "feature_name": "byteentropy_244",
+            "gain": 434.0069885253906
+          },
+          {
+            "feature_name": "histogram_122",
+            "gain": 427.33752917125355
+          }
+        ]
+      }
+    },
+    "controlled_comparison": {
+      "metric_primary": "tpr_at_fpr_0_001",
+      "B2_PRISM_value": 0.99139,
+      "B4_EMBER_value": 0.99283,
+      "delta_pp_B4_minus_B2": 0.143,
+      "delta_auc": 3e-05,
+      "interpretation": "B4 EMBER (2381-dim) vs B2 PRISM (425-dim) on identical 32,973-sample sub-corpus (SOREL+CAPE+MBZ_modern), identical split (seed=42), identical LightGBM hyperparameters. Isolates contribution of representation type. BODMAS excluded (no PEs available)."
+    },
+    "sanity_checks": {
+      "S1_no_nan_ember": true,
+      "S2_auc_b4_ge_95": true,
+      "S3_auc_b2_ge_95": true,
+      "S4_boot_b4_ordered": true,
+      "S5_boot_b2_ordered": true,
+      "S6_fail_pct_lt_5": true,
+      "all_passed": true
+    },
+    "compatibility_notes": {
+      "lief_version": "0.14.1-bae887e0",
+      "numpy_version": "2.4.3",
+      "ember_version": "unknown",
+      "patches_applied": [
+        "numpy_type_aliases (np.int/float/bool/complex/str/object \u2192 builtins)",
+        "lief_exception_classes (bad_format/bad_file/pe_error/parser_error/read_out_of_bound \u2192 Exception)"
+      ],
+      "warnings": "EMBER v2 extractor trained under LIEF 0.9; run here under LIEF 0.14. Minor differences in some byte/section features possible but expected to be negligible for binary classification at this saturation regime."
+    },
+    "runtime_seconds": 1583.7
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "corpus_metadata": {
+    "total_samples_ff": 49204,
+    "valid_ember": 48825,
+    "bodmas_ember_ok": 16202,
+    "non_bodmas_ember_ok": 32623,
+    "ember_failures": 379,
+    "working_corpus": 48825,
+    "train_size": 39060,
+    "test_size": 9765,
+    "train_malware": 15750,
+    "train_benign": 23310,
+    "test_malware": 3938,
+    "test_benign": 5827,
+    "scale_pos_weight": 1.48
+  },
+  "models": {
+    "B2_PRISM_full": {
+      "input_dims": 442,
+      "auc": 0.99965,
+      "tpr_at_fpr_0_001": 0.99746,
+      "tpr_at_fpr_0_01": 0.99924,
+      "f1_at_0_5": 0.99758,
+      "trees_used": 146,
+      "training_seconds": 4.5,
+      "bootstrap_ci_tpr": [
+        0.93377,
+        0.99875
+      ],
+      "bootstrap_median_tpr": 0.99719,
+      "bootstrap_std_tpr": 0.02743
+    },
+    "B4_EMBER_full": {
+      "input_dims": 2381,
+      "auc": 0.99999,
+      "tpr_at_fpr_0_001": 0.99873,
+      "tpr_at_fpr_0_01": 1.0,
+      "f1_at_0_5": 0.9986,
+      "trees_used": 159,
+      "training_seconds": 34.6,
+      "bootstrap_ci_tpr": [
+        0.99722,
+        0.99975
+      ],
+      "bootstrap_median_tpr": 0.99899,
+      "bootstrap_std_tpr": 0.00081
+    }
+  },
+  "comparison": {
+    "delta_tpr_pp": 0.127,
+    "delta_auc": 0.00034,
+    "ci_overlap": true,
+    "B2_ci": [
+      0.93377,
+      0.99875
+    ],
+    "B4_ci": [
+      0.99722,
+      0.99975
+    ]
+  },
+  "runtime_seconds": 55.5
+}
